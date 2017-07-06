@@ -1,0 +1,24 @@
+<h1>Hello-World! The button was clicked : {{value}} times</h1>
+
+
+<material-button (trigger)="click()">
+    <glyph icon = "favorite_outline"></glyph> Click Me
+</material-button>
+
+<p>
+    Enter your name:
+    <material-input [(ngModel)]="inputName"> </material-input>
+</p>
+
+
+<h3>Chat</h3>
+<material-list>
+    <material-list-item *ngFor="let msg of messages">
+        <div class ="name">  <span class = "name">{{msg.name}}</span> : <span class ="message"> {{msg.text}} </span>  </div>
+    </material-list-item>
+</material-list>
+
+
+<p>
+<material-input [(ngModel)]="inputText" (keyup.enter)="send()"> </material-input>
+</p>
